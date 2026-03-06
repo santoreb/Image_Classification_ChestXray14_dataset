@@ -71,6 +71,7 @@ epochs so I can see better performance.
 \end{table}
 
 | Disease | AUC |
+|-----|-----|
 | Atelectasis | 0.7656 |
 | Cardiomegaly | 0.8787|
 | Consolidation | 0.7387|
