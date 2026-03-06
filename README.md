@@ -70,10 +70,10 @@ epochs so I can see better performance.
     \end{tabular}
 \end{table}
 
-|Disease|AUC|
-|Atelectasis|0.7656|
-|Cardiomegaly|0.8787|
-|Consolidation|0.7387|
+| Disease | AUC |
+| Atelectasis | 0.7656 |
+| Cardiomegaly | 0.8787|
+| Consolidation | 0.7387|
 |Edema|0.8365|
 |Effusion|0.8135|
 |Emphysema|0.8108|
