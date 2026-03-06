@@ -34,4 +34,5 @@ The results from the training can be found in the table below.
 
 ## References
 [1] Le Lu Zhiyong Lu Mohammadhadi Bagheri Ronald M. Summers Xiaosong Wang, Yifan Peng. Chestx-ray8: Hospital-scale chest x-ray database and benchmarks on weakly-supervised classification and localization of common thorax diseases. CVPR, 1(1), 2017. 1
+
 [2] Chao-Yuan Wu Christoph Feichtenhofer Trevor Darrell Saining Xie Zhuang Liu, Hanzi Mao. A convnet for the 2020s. CVPR, 2(1), 2022. 1
