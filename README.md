@@ -70,6 +70,25 @@ epochs so I can see better performance.
     \end{tabular}
 \end{table}
 
+|Disease|AUC|
+|Atelectasis|0.7656|
+|Cardiomegaly|0.8787|
+|Consolidation|0.7387|
+|Edema|0.8365|
+|Effusion|0.8135|
+|Emphysema|0.8108|
+|Fibrosis|0.8035|
+|Hernia|0.8132|
+|Infiltration|0.6872|
+|Mass|0.8089|
+|No Finding|0.7237|
+|Nodule|0.7444|
+|Pleural Thickening|0.748|
+|Pneumonia|0.6963|
+|Pneumothorax|0.8334|
+|Average|0.7802|
+
+
 ## References
 [1] Le Lu Zhiyong Lu Mohammadhadi Bagheri Ronald M. Sum-
 mers Xiaosong Wang, Yifan Peng. Chestx-ray8: Hospital-
