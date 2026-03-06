@@ -10,71 +10,14 @@ ConvNext [2] is a an architecture created in 2022. The aim of its creation was t
 ## Data Preparation
 In order to use the data in the model it was necessary to organize it first. My first thought was to use pytorch’s ImageFolder function to read in all the images. However, in that case, I could not have images with multiple labels, which is the case in this dataset. To add multi binary labels, I decided then to create my own data loader library that would read image by image, separate them into training and test datasets, and that would be able to classify images with multiple labels.
 
-## Model Training
-I started using the pre-trained ConvNext base function as
-the model with adjustments to the first and last layers. The
-input of the first layer was adjusted to take images with only
-one channel and the last layer to predict 15 features, which
-included the 14 diseases plus the No Finding option. Once
-I started running the model with the normal image sizes of
-1024x1024 and batch size of 200, the code would stop be-
-cause of lack of memory in cuda. I then started using the py-
-torch pre-trained ConvNext tiny function, reduced the batch
-sizes to 20 and reduced the image sizes to 500x500. That
-fixed the out of memory error, but I believe that there could
-be better prediction results if the image sizes were bigger.
-I am still working on fine-tuning the model results. I
-want to run the model with bigger image sizes and for more
-epochs so I can see better performance.
-
 ## Results
-   
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        Disease & AUC \\
-        \hline
-        Atelectasis & 0.7656 \\
-        \hline
-        Cardiomegaly & 0.8787 \\
-        \hline
-        Consolidation & 0.7387 \\
-        \hline
-        Edema & 0.8365 \\
-        \hline
-        Effusion & 0.8135 \\
-        \hline
-        Emphysema & 0.8108 \\
-        \hline
-        Fibrosis & 0.8035 \\
-        \hline
-        Hernia & 0.8132 \\
-        \hline
-        Infiltration & 0.6872 \\
-        \hline
-        Mass & 0.8089 \\
-        \hline
-        No Finding & 0.7237 \\
-        \hline
-        Nodule & 0.7444 \\
-        \hline
-        Pleural Thickening & 0.748 \\
-        \hline
-        Pneumonia & 0.6963 \\
-        \hline
-        Pneumothorax & 0.8334 \\
-        \hline
-        Average & 0.7802 \\
-        \hline
-    \end{tabular}
-\end{table}
+The results from the training can be found in the table below.
 
-| Disease | AUC |
+|Disease|AUC|
 |-----|-----|
-| Atelectasis | 0.7656 |
-| Cardiomegaly | 0.8787|
-| Consolidation | 0.7387|
+|Atelectasis|0.7656|
+|Cardiomegaly|0.8787|
+|Consolidation|0.7387|
 |Edema|0.8365|
 |Effusion|0.8135|
 |Emphysema|0.8108|
@@ -89,13 +32,6 @@ epochs so I can see better performance.
 |Pneumothorax|0.8334|
 |Average|0.7802|
 
-
 ## References
-[1] Le Lu Zhiyong Lu Mohammadhadi Bagheri Ronald M. Sum-
-mers Xiaosong Wang, Yifan Peng. Chestx-ray8: Hospital-
-scale chest x-ray database and benchmarks on weakly-
-supervised classification and localization of common thorax
-diseases. CVPR, 1(1), 2017. 1
-[2] Chao-Yuan Wu Christoph Feichtenhofer Trevor Darrell Sain-
-ing Xie Zhuang Liu, Hanzi Mao. A convnet for the 2020s.
-CVPR, 2(1), 2022. 1
+[1] Le Lu Zhiyong Lu Mohammadhadi Bagheri Ronald M. Summers Xiaosong Wang, Yifan Peng. Chestx-ray8: Hospital-scale chest x-ray database and benchmarks on weakly-supervised classification and localization of common thorax diseases. CVPR, 1(1), 2017. 1
+[2] Chao-Yuan Wu Christoph Feichtenhofer Trevor Darrell Saining Xie Zhuang Liu, Hanzi Mao. A convnet for the 2020s. CVPR, 2(1), 2022. 1
